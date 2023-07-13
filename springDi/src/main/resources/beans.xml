@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config/>
+    <context:component-scan base-package="demo"/>
+
+
+    <bean id="user" class="demo.User">
+        <property name="id" value="001"/>
+    </bean>
+    <bean id="student" class="demo.student">
+        <property name="name" value="地瓜"/>
+<!--        ref 引用类型-->
+        <property name="user" ref="user"/>
+<!--        array 注入值-->
+        <property name="books">
+            <array>
+                <value>时间简史</value>
+                <value>相对论</value>
+            </array>
+        </property>
+<!--        list 类型-->
+        <property name="course" >
+            <list>
+                <value>语文</value>
+                <value>数学</value>
+                <value>英语</value>
+            </list>
+        </property>
+<!--        map 类型-->
+        <property name="card">
+            <map>
+                <entry key="身份证" value="123456"/>
+                <entry key="中国邮政" value="123456789"/>
+            </map>
+        </property>
+<!--        set 类型-->
+        <property name="games">
+            <set>
+                <value>王者荣耀</value>
+                <value>Call of Duty</value>
+            </set>
+        </property>
+<!--        空值-->
+        <property name="wife">
+            <null/>
+        </property>
+<!--        Properties 类型-->
+        <property name="info">
+            <props>
+                <prop key="学号">0912200207</prop>
+                <prop key="性别">男</prop>
+                <prop key="姓名">啊浩</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
