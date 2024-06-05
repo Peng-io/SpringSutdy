@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -9,15 +10,12 @@
         <module name="AppConfig" />
         <module name="helloSrping" />
         <module name="springDi" />
-        <module name="springAutowired" />
         <module name="springAOP" />
+        <module name="springAutowired" />
         <module name="springMybaits" />
         <module name="springAnno" />
         <module name="springMybatisAppConfig" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="MybatisStudy" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
